@@ -26,7 +26,6 @@ En esta práctica voy a crear una jaula con una distribución Ubuntu en la que v
 # Creación de la jaula
 
 ```sh
-<<<<<<< HEAD
 sudo debootstrap --arch=amd64 quantal /jaulas/quantal/	http://archive.ubuntu.com/ubuntu
 sudo apt-get install dchroot
 sudo mkdir /var/chroot  
@@ -47,9 +46,6 @@ root-groups=root
 ```
 
 El siguiente paso es configurar el directorio */proc*:
-=======
-sudo rinse --distribution centos-6 --arch amd64 --directory ./centos6/
->>>>>>> fccbff3c30dbbc4d76db70cf0e15e14bdfb014c6
 
 ```sh
 sudo mount -o bind /proc jaulas/quantal/proc/
