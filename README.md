@@ -24,6 +24,7 @@ Práctica 2 de la asignatura IV
 # Creación de la jaula
 
 ```sh
+sudo rinse --distribution centos-6 --arch amd64 --directory ./centos6/
 
 ```
 
