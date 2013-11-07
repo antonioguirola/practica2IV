@@ -14,8 +14,8 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.
 org/licenses/>.
 
-practica2IV
-===========
+Práctica 2 IV
+=============
 
 Práctica 2 de la asignatura IV
 
