@@ -73,7 +73,7 @@ service apache2 restart
 
 A continuación compruebo que se están instalando las cosas correctamente, creo un archivo `nano /var/www/info.php` con el contenido: `<?php phpinfo();?>` y compruebo en el navegador que funciona:
 
-![[phpinfo.png]]
+![captura](phpinfo.png)
 
 Los siguiente es instalar MySQL y phpMyAdmin:
 
@@ -86,11 +86,11 @@ apt-get install phpmyadmin
 
 Con esa última orden aparecía el siguiente problema:
 
-![[nophpmyadmin.png]]
+![captura](nophpmyadmin.png)
 
 Leí [aquí](http://ubuntuforums.org/showthread.php?t=1799973) que es necesario activar el repositorio *universe*, [aquí](http://askubuntu.com/questions/148638/how-do-i-enable-the-universe-repository) encontré cómo añadirlo,el archivo */etc/apt/sources.list* debe acabar así:
 
-![[sources-list.png]]
+![captura](sources-list.png)
 
 Y ya sí se puede continuar con la instalación:
 
@@ -100,7 +100,7 @@ apt-get install phpmyadmin -y
 ```
 
 Vemos que nos pregunta con qué servidor web lo queremos conectar:
-![[phpmyadmin-instalacion.png]]
+![captura](phpmyadmin-instalacion.png)
 
 Después de ésto, al introducir la dirección *http://127.0.0.1/phpmyadmin* en el navegador obtenía un error 404, por lo que seguí las instrucciones del manual e introduje las siguientes líneas al final del archivo `/etc/apache2/apache2.conf`:
 
