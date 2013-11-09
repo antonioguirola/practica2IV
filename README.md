@@ -111,7 +111,7 @@ Include /etc/phpmyadmin/apache.conf
 
 Y ahora sí, tras reiniciar el servidor web:
 
-![captura](https://github.com/antonioguirola/practica2IV/blob/master/phpmyadmin-funciona.png)
+![captura](https://github.com/antonioguirola/practica2IV/blob/master/phpmyadmin-funciona.png?raw=true)
 
 
 
