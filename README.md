@@ -17,8 +17,6 @@ org/licenses/>.
 Práctica 2 IV - Periódico digital en jaula chroot
 =================================================
 
-Práctica 2 de la asignatura IV
-
 ## Introducción
 
 En esta práctica voy a crear una jaula con una distribución Ubuntu en la que voy a instalar el servidor web Apache así como lo necesario para ejecutar la aplicación de la [práctica 1](https://github.com/antonioguirola/periodico) (PHP, MySQL,...)
@@ -112,6 +110,25 @@ Include /etc/phpmyadmin/apache.conf
 Y ahora sí, tras reiniciar el servidor web:
 
 ![captura](phpmyadmin-funciona.png)
+
+## Instalación de la aplicación web
+
+El siguiente paso es instalar la aplicación web, gracias a que el código está subido a GitHub puedo descargarlo cómodamente:
+
+```sh
+apt-get install git
+cd /var/www/
+git clone https://github.com/antonioguirola/periodico.git
+```
+Desde la interfaz de phpMyAdmin creamos una base de datos llamada *periodicoBD* y utilizo la opción de importar, seleccionando el fichero sql del proyecto *BD_periodico.sql* con datos de prueba:
+
+![captura](bd-importacion.png)
+
+El siguiente paso es establecer la configuración de la aplicación para que use la base de datos que hemos creado, para ello hay que modificar el archivo `/var/www/periodico/php/BD/configuracionBD.inc` y sustituir los parámetros de configuración que trae (adaptados a la práctica 1 con OpenShift) por los correctos.
+
+Una vez establecida la configuración, ya podemos acceder a nuestra aplicación web enjaulada desde el navegador:
+
+![captura](periodico-funciona.png)
 
 
 
